@@ -1,0 +1,1164 @@
+@import './obnulenie.scss';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:ital,wght@0,500;0,600;0,700;0,800;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+$bgcl: #1E1E1E;
+@mixin fonts($fs, $fw, $c, $p, $ln){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+    padding: $p;
+    line-height: $ln;
+}
+@mixin links($fs, $fw, $c, $p){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+    padding: $p;
+}
+@mixin btn($p, $m, $bc, $bor, $br, $fs, $fw, $c, $ta){
+    padding: $p;
+    margin: $m;
+    background-color: $bc;
+    border: $bor;
+    border-radius: $br;
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+    text-align: $ta;
+}
+
+//----------------------------------------------
+
+main{
+    background-image: url(../img/vec1.svg);
+    background-repeat: no-repeat;
+    background-color: $bgcl;
+    header{
+        .header-container{
+            width: 80%;
+            height: 146px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            @media screen and (max-width: 700px){
+                &{
+                   height: 80px;
+                }
+            }  
+            @media screen and (max-width: 300px){
+                &{
+                   height: 50px;
+                }
+            }  
+            .text{
+                @include fonts(24px, 700, #C4C4C4, 0, 0);
+                @media screen and (max-width: 700px){
+                    &{
+                        @include fonts(20px, 700, #C4C4C4, 0, 0);
+                    }
+                }  
+                @media screen and (max-width: 700px){
+                    &{
+                        @include fonts(16px, 700, #C4C4C4, 0, 0);
+                    }
+                } 
+                @media screen and (max-width: 300px){
+                    &{
+                        @include fonts(10px, 700, #C4C4C4, 0, 0);
+                    }
+                } 
+            }
+            .navbar{
+                display: flex;
+                gap: 50px;
+                .img2{
+                    display: none;
+                    width: 30px;
+                    @media screen and (max-width: 1000px){
+                        &{
+                            display: block;
+                            filter: invert(50%); 
+                            &:hover{
+                                filter: invert(100%);
+                            }
+                        }
+                    }  
+                    @media screen and (max-width: 700px){
+                        &{
+                            width: 20px;
+                        }
+                    }  
+                    @media screen and (max-width: 300px){
+                        &{
+                            width: 10px;
+                        }
+                    } 
+                }
+                @media screen and (max-width: 450px){
+                    .search{
+                        display: none; 
+                    }
+                } 
+                .link{
+                    @media screen and (max-width: 1000px){
+                        &{
+                            display: none; 
+                        }
+                    }  
+                    @include links(16px, 500, #646464, 18px 0);
+                    transition: 200ms;
+                    &:hover{
+                        color: #C4C4C4;
+                    }
+                }
+                .btn{
+                    @include btn(16px 32px, 0, transparent, 2px solid #646464, 87px, 16px, 500, #646464, center);
+                    transition: 200ms;
+                    &:hover{
+                        color: #C4C4C4;
+                        border-color: #C4C4C4;
+                    }
+                    @media screen and (max-width: 1000px){
+                        &{
+                            display: none; 
+                        }
+                    } 
+                }
+            }
+        }
+    }
+
+
+ //---------------------------------------------------------------
+
+    .container1{
+        background-image: url(../img/vec2.svg);
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        .ins1{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 100px;
+            @media screen and (max-width: 1160px){
+                &{
+                    gap: 20px;
+                }
+            } 
+            .sup1{
+                width: 48%;
+                padding: 100px 0 0 0;
+                @media screen and (max-width: 1160px){
+                    &{
+                        width: 100%;
+                        padding: 0 0 20px 0;
+                    }
+                } 
+                .text{
+                    @include fonts(56px, 700, #C4C4C4, 0 0 30px 0, 74px);
+                    @media screen and (max-width: 850px){
+                        &{
+                            @include fonts(46px, 700, #C4C4C4, 0 0 30px 0, 64px);
+                        }
+                    } 
+                    @media screen and (max-width: 740px){
+                        &{
+                            @include fonts(36px, 700, #C4C4C4, 0 0 10px 0, 50px);
+                        }
+                    } 
+                    @media screen and (max-width: 570px){
+                        &{
+                            @include fonts(26px, 700, #C4C4C4, 0 0 10px 0, 30px);
+                        }
+                    } 
+                    @media screen and (max-width: 480px){
+                        &{
+                            @include fonts(20px, 700, #C4C4C4, 0 0 10px 0, 20px);
+                        }
+                    } 
+                    @media screen and (max-width: 330px){
+                        &{
+                            @include fonts(17px, 700, #C4C4C4, 0 0 10px 0, 17px);
+                        }
+                    } 
+                }
+                .text2{
+                    @include fonts(16px, 400, #646464, 0 0 30px, 32px);
+                    @media screen and (max-width: 760px){
+                        &{
+                            @include fonts(13px, 400, #646464, 0 0 20px, 20px);
+                        }
+                    }
+                    @media screen and (max-width: 570px){
+                        &{
+                            @include fonts(10px, 400, #646464, 0 0 30px, 16px);
+                        }
+                    }     
+                    @media screen and (max-width: 480px){
+                        &{
+                            @include fonts(7px, 400, #646464, 0 0 10px, 10px);
+                        }
+                    }     
+                }   
+                .btn{
+                    @include btn(16px 32px, 0, 
+                    #FC3867, 0  , 87px, 16px, 500, white, center);
+                    transition: 200ms;
+                    transition: 200ms;
+                    &:hover{
+                        box-shadow: inset 0 0 20px 5px #900928;
+                    }
+                    @media screen and (max-width: 670px){
+                        &{
+                            @include btn(7px 17px, 0, 
+                         #FC3867, 0  , 87px, 10px, 500, white, center);
+                        }
+                    }  
+                    @media screen and (max-width: 330px){
+                        &{
+                            @include btn(5px 10px, 0, 
+                         #FC3867, 0  , 87px, 7px, 500, white, center);
+                        }
+                    } 
+                }
+            }
+            .sup2{
+                @media screen and (max-width: 640px){
+                    &{
+                        width: 300px;
+                    }
+                } 
+                @media screen and (max-width: 480px){
+                    &{
+                        width: 200px;
+                    }
+                } 
+                @media screen and (max-width: 300px){
+                    &{
+                        width: 100px;
+                    }
+                } 
+            }
+        }
+    }
+
+    //----------------------------------------------------------------
+
+    .container2{
+        background-color: white;
+        .ins2{
+            width: 65%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            padding: 100px 0;
+            @media screen and (max-width: 1350px){
+                &{
+                    gap: 50px;
+                    width: 100%;
+                }
+                @media screen and (max-width: 850px){
+                    &{
+                        padding: 50px 0;
+                    }
+                }
+                @media screen and (max-width: 600px){
+                    &{
+                        padding: 30px 0;
+                    }
+                }
+                @media screen and (max-width: 500px){
+                    &{
+                        padding: 15px 0;
+                        gap: 30px;
+                    }
+                }
+                @media screen and (max-width: 400px){
+                    &{
+                        gap: 20px;
+                    }
+                }
+                @media screen and (max-width: 270px){
+                    &{
+                        gap: 10px;
+                    }
+                }
+            }
+            .sub1{
+                .text{
+                    text-align: center;
+                    letter-spacing: -0.005em;
+                    @include fonts(64px, 700, #070707, 0 0 15px, 74px);
+                    @media screen and (max-width: 850px){
+                        &{
+                            @include fonts(50px, 700, #070707, 0, 60px);
+                        }
+                    }
+                    @media screen and (max-width: 700px){
+                        &{
+                            @include fonts(40px, 700, #070707, 0, 50px);
+                        }
+                    }
+                    @media screen and (max-width: 600px){
+                        &{
+                            @include fonts(30px, 700, #070707, 0, 40px);
+                        }
+                    }
+                    @media screen and (max-width: 500px){
+                        &{
+                            @include fonts(20px, 700, #070707, 0, 30px);
+                        }
+                    }
+                }
+                .text2{
+                    text-align: center;
+                    letter-spacing: -0.005em;
+                    @include fonts(18px, 700, #070707, 0 0 10px, 23px);
+                    @media screen and (max-width: 850px){
+                        &{
+                            @include fonts(13px, 700, #070707, 0px, 17px);
+                        }
+                    }
+                    @media screen and (max-width: 700px){
+                        &{
+                            @include fonts(8px, 700, #070707, 0px, 10px);
+                        }
+                    }
+                    @media screen and (max-width: 600px){
+                        &{
+                            @include fonts(5px, 700, #070707, 0px, 0px);
+                        }
+                    }
+                    @media screen and (max-width: 500px){
+                        &{
+                            @include fonts(3px, 700, #070707, 0px, 0px);
+                        }
+                    }
+                }
+                .text3{
+                    text-align: center;
+                    letter-spacing: -0.005em;
+                    @include fonts(16px, 400, #C4C4C4, 0, 21px);
+                    @media screen and (max-width: 850px){
+                        &{
+                            @include fonts(10px, 400, #C4C4C4, 0, 21px);
+                        }
+                    }
+                    @media screen and (max-width: 700px){
+                        &{
+                            @include fonts(7px, 400, #C4C4C4, 0, 17px);
+                        }
+                    }
+                    @media screen and (max-width: 600px){
+                        &{
+                            @include fonts(5px, 400, #C4C4C4, 0, 15px);
+                        }
+                    }
+                    @media screen and (max-width: 500px){
+                        &{
+                            @include fonts(3px, 400, #C4C4C4, 0, 10px);
+                        }
+                    }
+                    @media screen and (max-width: 400px){
+                        &{
+                            @include fonts(1px, 400, #C4C4C4, 0, 10px);
+                        }
+                    }
+                }
+            }
+            .sub2{
+                width: 3px;
+                background-color: #D8D8D8;
+                @media screen and (max-width: 600px){
+                    &{
+                        width: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    //----------------------------------------------------------------------
+
+    .container3{
+        .ins3{
+            width: 80%;
+            margin: 0 auto;
+            padding: 100px 0;
+            .row1{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 50px;  
+                gap: 20px;
+                @media screen and (max-width: 550px){
+                    &{
+                        margin-bottom: 10px;
+                    }
+                }
+                .rowins1{
+                    width: 40%;
+                    @media screen and (max-width: 1350px){
+                        &{
+                            width: 50%;
+                        }
+                    }
+                    .text{
+                        letter-spacing: 1px;
+                        @include fonts(16px, 400, white, 0 0 15px, 18px);
+                        @media screen and (max-width: 770px){
+                            &{
+                                @include fonts(13px, 400, white, 0 0 15px, 10px);
+                            }
+                        }
+                        @media screen and (max-width: 580px){
+                            &{
+                                @include fonts(10px, 400, white, 0 0 15px, 7px);
+                            }
+                        }
+                        @media screen and (max-width: 400px){
+                            &{
+                                @include fonts(8px, 400, white, 0 0 15px, 5px);
+                            }
+                        }
+                    }
+                    .text2{
+                        letter-spacing: -0.5px;
+                        @include fonts(40px, 700, white, 0 0 15px, 60px);
+                        @media screen and (max-width: 770px){
+                            &{
+                                @include fonts(30px, 700, white, 0 0 15px, 40px);
+                            }
+                        }
+                        @media screen and (max-width: 580px){
+                            &{
+                                @include fonts(20px, 700, white, 0 0 15px, 20px);
+                            }
+                        }
+                        @media screen and (max-width: 400px){
+                            &{
+                                @include fonts(14px, 700, white, 0 0 15px, 13px);
+                            }
+                        }
+                    }
+                }
+                .rowins2{
+                    width: 35%;
+                    @media screen and (max-width: 1350px){
+                        &{
+                            width: 50%;
+                        }
+                    }
+                    .text{
+                        @media screen and (max-width: 770px){
+                            &{
+                                @include fonts(12px, 400, white, 90px 0 0 0, 160%);
+                            }
+                        }
+                        @media screen and (max-width: 580px){
+                            &{
+                                @include fonts(10px, 400, white, 40px 0 0 0, 140%);
+                            }
+                        }
+                        @media screen and (max-width: 400px){
+                            &{
+                                @include fonts(7px, 400, white, 20px 0 0 0, 120%);
+                            }
+                        }
+                        @include fonts(16px, 400, white, 90px 0 0 0, 180%);
+                    }
+                }
+            }
+            .row2{
+                display: flex;
+                justify-content: center;
+                gap: 100px;
+                @media screen and (max-width: 1510px){
+                    &{
+                        gap: 50px;
+                    }
+                }
+                @media screen and (max-width: 1250px){
+                    &{
+                        gap: 30px;
+                    }
+                }
+                @media screen and (max-width: 1160px){
+                    &{
+                        gap: 10px;
+                    }
+                }
+                .sub1{
+                    display: flex;
+                    gap: 10px;
+                    width: 40%;
+                    .text{
+                        @include fonts(20px, 700, white, 0 0 10px, 23px);
+                        @media screen and (max-width: 1050px){
+                            &{
+                                @include fonts(15px, 700, white, 0 0 7px, 15px);
+                            }
+                        }
+                        @media screen and (max-width: 840px){
+                            &{
+                                @include fonts(13px, 700, white, 0 0 7px, 13px);
+                            }
+                        }
+                        @media screen and (max-width: 700px){
+                            &{
+                                @include fonts(10px, 700, white, 0 0 7px, 10px);
+                            }
+                        }
+                        @media screen and (max-width: 550px){
+                            &{
+                                @include fonts(7px, 700, white, 0 0 7px, 7px);
+                            }
+                        }
+                    }
+                    .text2{
+                        @include fonts(16px, 400, white, 0, 180%);
+                        @media screen and (max-width: 1050px){
+                            &{
+                                @include fonts(13px, 400, white, 0, 160%);
+                            }
+                        }
+                        @media screen and (max-width: 840px){
+                            &{
+                                @include fonts(10px, 400, white, 0, 140%);
+                            }
+                        }
+                        @media screen and (max-width: 700px){
+                            &{
+                                @include fonts(7px, 300, white, 0, 120%);
+                            }
+                        }
+                        @media screen and (max-width: 550px){
+                            &{
+                                @include fonts(5px, 300, white, 0, 110%);
+                            }
+                        }
+                    }
+                    .inc{
+                        @media screen and (max-width: 850px){
+                            &{
+                                width: 30px;
+                            }
+                        }   
+                        @media screen and (max-width: 700px){
+                            &{
+                                width: 20px;
+                            }
+                        }  
+                    }
+                }
+                .sub2{
+                    width: 3px;
+                    background-color: #D8D8D8;
+                    @media screen and (max-width: 600px){
+                        &{
+                          width: 1px;  
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //-------------------------------------------------
+
+    .container4{
+        text-align: center;
+        padding-bottom: 100px;
+        .text{
+            @include fonts(36px, 700, white, 0 20px 20px, 41px);
+            @media screen and (max-width: 600px){
+                &{
+                    @include fonts(30px, 700, white, 0 20px 20px, 30px);
+                }
+            }
+            @media screen and (max-width: 420px){
+                &{
+                    @include fonts(20px, 700, white, 0 20px 10px, 20px);
+                }
+            }
+        }
+        .text2{
+            @include fonts(24px, 500, white, 0px 20px 50px, 28px);
+            @media screen and (max-width: 600px){
+                &{
+                    @include fonts(18px, 500, white, 0 20px 50px, 20px);
+                }
+            }
+            @media screen and (max-width: 420px){
+                &{
+                    @include fonts(14px, 500, white, 0 20px 50px, 17px);
+                }
+            }
+        }
+        .ins4{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            @media screen and (max-width: 550px){
+                &{
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+            .colon{
+                width: 49%;
+                @media screen and (max-width: 550px){
+                    &{
+                        width: 80%;
+                    }
+                }
+                .item{
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    background-color: white;
+                    border-radius: 12px;
+                    display: flex;
+                    gap: 20px;  
+                    height: 220px;
+                    @media screen and (max-width: 1250px){
+                        &{
+                           height: 300px; 
+                        }
+                    }
+                    @media screen and (max-width: 650px){
+                        &{
+                           padding: 10px; 
+                        }
+                    }
+                    @media screen and (max-width: 550px){
+                        &{
+                           height: 200px; 
+                        }
+                    }
+                    @media screen and (max-width: 360px){
+                        &{
+                           height: 280px; 
+                        }
+                    }
+                    @media screen and (max-width: 300px){
+                        &{
+                           height: 300px; 
+                        }
+                    }
+                    .text{
+                        text-align: left;
+                        @include fonts(24px, 700, black, 0 0 10px, 28px);
+                        @media screen and (max-width: 1080px){
+                            &{
+                                @include fonts(20px, 700, black, 0 0 10px, 24px);
+                            }
+                        }
+                    }
+                    .text2{ 
+                        text-align: left;
+                        @include fonts(18px, 400, #272727, 0 100px 0 0, 160%);
+                        @media screen and (max-width: 1080px){
+                            &{
+                                @include fonts(14px, 400, #272727, 0 0px 0 0, 150%);
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 1250px){
+                        .ted{
+                           width: 40px;
+                        }
+                    }
+                    @media screen and (max-width: 630px){
+                        .ted{
+                           width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //----------------------------------------------------------------------
+
+    .container5{
+        text-align: center;
+        padding-bottom: 100px;
+        .text{
+            @include fonts(40px, 400, white, 0 20px 20px, 46px);
+            @media screen and (max-width: 600px){
+                &{
+                    @include fonts(30px, 400, white, 0 20px 20px, 36px);
+                }
+            }
+            @media screen and (max-width: 420px){
+                &{
+                    @include fonts(20px, 400, white, 0 20px 20px, 26px); 
+                }
+            }
+        }
+        .text2{
+            @include fonts(14px, 400, #999999, 0 20px 50px, 24px);
+            @media screen and (max-width: 600px){
+                &{
+                    @include fonts(12px, 400, #999999, 0 20px 50px, 20px);
+                }
+            }
+            @media screen and (max-width: 420px){
+                &{
+                    @include fonts(10px, 400, #999999, 0 20px 50px, 18px);
+                }
+            }
+        }
+        .ins5{
+            width: 75%;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 0 auto;
+        }
+        .item{
+            margin-bottom: 10px;
+        }
+    }
+
+    //-----------------------------------------------------------
+
+    .container6{
+        text-align: center;
+        padding-bottom: 200px;
+        .text{
+            @include fonts(16px, 500, white, 0 20px 20px, 18px);
+            @media screen and (max-width: 600px){
+                &{
+                    @include fonts(13px, 500, white, 0 20px 20px, 14px);
+                }
+            }
+            @media screen and (max-width: 420px){
+                &{
+                    @include fonts(10px, 500, white, 0 20px 20px, 11px);
+                }
+            } 
+        }
+        .text2{
+            @include fonts(40px, 500, white, 0 20px 50px, 50px);
+            @media screen and (max-width: 600px){
+                &{
+                    @include fonts(30px, 500, white, 0 20px 50px, 40px);
+                }
+            }
+            @media screen and (max-width: 420px){
+                &{
+                    @include fonts(20px, 500, white, 0 20px 50px, 20px);
+                }
+            }
+        }
+        .ins6{
+            width: 65%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            @media screen and (max-width: 1500px){
+                &{
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+            .item{
+                @media screen and (max-width: 420px){
+                    .sep{
+                        width: 10px;
+                    }
+                }
+                @media screen and (max-width: 300px){
+                    .sep{
+                        width: 5px;
+                    }
+                }
+                @media screen and (max-width: 1500px){
+                    &{
+                        width: 500px;
+                        height: 600px;
+                    }
+                }
+                @media screen and (max-width: 800px){
+                    &{
+                        width: 320px;
+                        height: 400px;
+                    }
+                }
+                @media screen and (max-width: 420px){
+                    &{
+                        width: 220px;
+                        height: 300px;
+                    }
+                }
+                @media screen and (max-width: 300px){
+                    &{
+                        width: 120px;
+                        height: 200px;
+                    }
+                }
+                padding: 40px 20px 0px;
+                border-radius: 12px;
+                background-color: white;
+                width: 350px;
+                height: 450px;
+                .text{
+                    text-align: left;
+                    @include fonts(20px, 700, black, 0 0 30px, 23px);
+                    @media screen and (max-width: 1500px){
+                        &{
+                            @include fonts(40px, 700, black, 0 0 30px, 100px);
+                        }
+                    }
+                    @media screen and (max-width: 800px){
+                        &{
+                            @include fonts(20px, 700, black, 0 0 20px, 50px);
+                        }
+                    }
+                    @media screen and (max-width: 420px){
+                        &{
+                            @include fonts(17px, 700, black, 0 0 10px, 50px);
+                        }
+                    }
+                    @media screen and (max-width: 300px){
+                        &{
+                            @include fonts(15px, 700, black, 0 0 1  0px, 10px);
+                        }
+                    }
+                }
+                .text2{
+                    text-align: left;
+                    @include fonts(48px, 500, black, 0 0 30px, 55px);
+                    @media screen and (max-width: 1500px){
+                        &{
+                            @include fonts(70px, 700, black, 0 0 30px, 50px);
+                        }
+                    }
+                    @media screen and (max-width: 800px){
+                        &{
+                            @include fonts(50px, 700, black, 0 0 20px, 40px);
+                        }
+                    }
+                    @media screen and (max-width: 420px){
+                        &{
+                            @include fonts(30px, 700, black, 0 0 20px, 20px);
+                        }
+                    }
+                    @media screen and (max-width: 300px){
+                        &{
+                            @include fonts(20px, 700, black, 0 0 20px, 10px);
+                        }
+                    }
+                    span{
+                        @include fonts(14px, 400, black, 0 0 30px, 16px);
+                        @media screen and (max-width: 1500px){
+                            &{
+                                @include fonts(30px, 700, black, 0 0 30px, 50px);
+                            }
+                        }
+                        @media screen and (max-width: 800px){
+                            &{
+                                @include fonts(20px, 700, black, 0 0 20px, 40px);
+                            }
+                        }
+                        @media screen and (max-width: 420px){
+                            &{
+                                @include fonts(13px, 700, black, 0 0 10px, 10px);
+                            }
+                        }
+                         @media screen and (max-width: 300px){
+                            &{
+                                @include fonts(10px, 700, black, 0 0 10px, 10px);
+                            }
+                        }
+                    }
+                }
+                .text3{
+                    text-align: left;
+                    @include fonts(14px, 400, black, 0 20px 10px, 16px);
+                    @media screen and (max-width: 1500px){
+                        &{
+                            @include fonts(20px, 700, black, 0 0 30px, 10px);
+                        }
+                    }
+                    @media screen and (max-width: 800px){
+                        &{
+                            @include fonts(13px, 700, black, 0 0 10px, 10px);
+                        }
+                    }
+                    @media screen and (max-width: 420px){
+                        &{
+                            @include fonts(10px, 700, black, 0 0 5px, 7px);
+                        }
+                    }
+                    @media screen and (max-width: 300px){
+                        &{
+                            @include fonts(5px, 700, black, 0 0 4px, 4px);
+                        }
+                    }
+                }
+                .btn{
+                    @include btn(16px 32px, 100px 40px 0, transparent, 2px solid #646464, 87px, 16px, 500, #646464, center);
+                    transition: 200ms;
+                    &:hover{
+                        color: black;
+                        border-color: black;
+                    }
+                    @media screen and (max-width: 1500px){
+                        &{
+                            @include btn(20px 36px, 120px 40px 0, transparent, 2px solid #646464, 87px, 20px, 500, #646464, center);
+                        }
+                    }
+                    @media screen and (max-width: 800px){
+                        &{
+                            @include btn(10px 20px, 100px 40px 0, transparent, 2px solid #646464, 87px, 15px, 500, #646464, center);
+                        }
+                    }
+                    @media screen and (max-width: 420px){
+                        &{
+                            @include btn(7px 10px, 80px 40px 0, transparent, 2px solid #646464, 87px, 10px, 500, #646464, center);
+                        }
+                    }
+                    @media screen and (max-width: 300px){
+                        &{
+                            @include btn(5px 10px, 40px 10px 0, transparent, 2px solid #646464, 87px, 6px, 500, #646464, center);
+                        }
+                    }
+                }
+                .one{
+                    @include btn(16px 32px, 60px 40px 0, #FC3867, 0, 87px, 16px, 500, white, center);
+                    transition: 200ms;
+                    &:hover{
+                        box-shadow: inset 0 0 20px 5px #900928;
+                    }   
+                    @media screen and (max-width: 1500px){
+                        &{
+                            @include btn(20px 36px, 60px 40px 0, #FC3867, 0, 87px, 20px, 500, white, center);
+                        }
+                    }
+                    @media screen and (max-width: 800px){
+                        &{
+                            @include btn(10px 20px, 60px 40px 0, #FC3867, 0, 87px, 15px, 500, white, center);
+                        }
+                    }
+                    @media screen and (max-width: 420px){
+                        &{
+                            @include btn(7px 10px, 60px 40px 0, #FC3867, 0, 87px, 10px, 500, white, center);
+                        }
+                    }
+                    @media screen and (max-width: 300px){
+                        &{
+                            @include btn(5px 10px, 20px 10px 0, #FC3867, 0, 87px, 6px, 500, white, center);
+                        }
+                    }
+                }
+                .two{
+                    @include btn(16px 32px, 30px 40px 40px, transparent, 2px solid #646464, 87px, 16px, 500, #646464, center);
+                    transition: 200ms;
+                    &:hover{
+                        color: black;
+                        border-color: black;
+                    }
+                    @media screen and (max-width: 1500px){
+                        &{
+                            @include btn(20px 36px, 10px 40px 0, transparent, 2px solid #646464, 87px, 20px, 500, #646464, center);
+                        }
+                    }
+                    @media screen and (max-width: 800px){
+                        &{
+                            @include btn(10px 20px, 30px 40px 0, transparent, 2px solid #646464, 87px, 15px, 500, #646464, center);
+                        }
+                    }
+                    @media screen and (max-width: 420px){
+                        &{
+                            @include btn(7px 10px, 40px 10px 0, transparent, 2px solid #646464, 87px, 10px, 500, #646464, center);
+                        }
+                    }
+                    @media screen and (max-width: 300px){
+                        &{
+                            @include btn(5px 10px, 10px 10px 0, transparent, 2px solid #646464, 87px, 6px, 500, #646464, center);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //---------------------------------------------------
+
+    .container7{
+        background-color: white;
+        .ins7{
+            margin: 0 auto;
+            width: 80%;
+            .text{
+                text-align: center;
+                @include fonts(16px, 600,  #C4C4C4, 40px 0 30px, 20px);
+                @media screen and (max-width: 600px){
+                    &{
+                        @include fonts(13px, 600,  #C4C4C4, 40px 0 30px, 10px);
+                    }
+                }
+            }
+            .text2{
+                text-align: center;
+                @include fonts(40px, 700,  #212226, 0px 0 30px, 64px);
+                @media screen and (max-width: 600px){
+                    &{
+                        @include fonts(30px, 700,  #212226, 0px 0 20px, 40px);
+                    }
+                }
+                @media screen and (max-width: 400px){
+                    &{
+                        @include fonts(20px, 700,  #212226, 0px 0 20px, 25px);
+                    }
+                }
+            }
+            .but{
+                display: flex;
+                justify-content: center;
+                .btn{
+                    @include btn(16px 32px, 0px 40px 40px, #FC3867, 0, 87px, 16px, 500, white, center);
+                    transition: 200ms;
+                    &:hover{
+                        box-shadow: inset 0 0 20px 5px #900928;
+                    }    
+                    @media screen and (max-width: 420px){
+                        &{
+                            @include btn(13px 26px, 0px 40px 40px, #FC3867, 0, 87px, 10px, 500, white, center);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: #070707;
+    .insfut{
+        width: 80%;
+        padding: 50px 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        .item{
+            @media screen and (max-width: 750px){
+                .yett{
+                    width: 20px;
+                }
+            }
+            @media screen and (max-width: 520px){
+                .yett{
+                    width: 13px;
+                }
+            }
+            @media screen and (max-width: 370px){
+                .yett{
+                    width: 10px;
+                }
+            }
+            .text{
+                text-align: left;
+                @include fonts(24px, 800, white, 0 0 10px, 30px);
+                @media screen and (max-width: 1100px){
+                    &{
+                        @include fonts(20px, 800, white, 0 0 10px, 20px);
+                    }
+                }
+                @media screen and (max-width: 750px){
+                    &{
+                        @include fonts(13px, 800, white, 0 0 10px, 10px);
+                    }
+                }
+                @media screen and (max-width: 520px){
+                    &{
+                        @include fonts(10px, 800, white, 0 0 10px, 7px);
+                    }
+                }
+                @media screen and (max-width: 370px){
+                    &{
+                        @include fonts(7px, 800, white, 0 0 10px, 5px);
+                    }
+                }
+            }
+            .text2{
+                @include fonts(14px, 400, #C4C4C4, 0 0 10px, 24px);
+                padding: 10px 0;
+                @media screen and (max-width: 1100px){
+                    &{
+                        @include fonts(10px, 400, #C4C4C4, 0 0 10px, 18px);
+                    }
+                }
+                @media screen and (max-width: 750px){
+                    &{
+                        @include fonts(7px, 400, #C4C4C4, 0 0 7px, 8px);
+                    }
+                }
+                @media screen and (max-width: 520px){
+                    &{
+                        @include fonts(5px, 400, #C4C4C4, 0 0 7px, 8px);
+                    }
+                }
+                @media screen and (max-width: 370px){
+                    &{
+                        @include fonts(3px, 400, #C4C4C4, 0 0 7px, 5px);
+                    }
+                }
+            }
+            .text3{
+                @include fonts(16px, 400, #C4C4C4, 0 0 10px, 18px);
+                @media screen and (max-width: 1100px){
+                    &{
+                        @include fonts(10px, 400, #C4C4C4, 0 0 10px, 14px);
+                    }
+                }
+                @media screen and (max-width: 750px){
+                    &{
+                        @include fonts(7px, 400, #C4C4C4, 0 0 10px, 5px);
+                    }
+                }
+                @media screen and (max-width: 520px){
+                    &{
+                        @include fonts(5px, 400, #C4C4C4, 0 0 10px, 5px);
+                    }
+                }
+                @media screen and (max-width: 370px){
+                    &{
+                        @include fonts(3px, 400, #C4C4C4, 0 0 10px, 3px);
+                    }
+                }
+            }
+        }
+        
+    }
+    .line{
+        height: 2px;
+        width: 80%;
+        background-color: #C4C4C4;
+        margin: 0 auto;
+    }
+    .text{
+        text-align: center;
+        @include fonts(14px, 400, #C4C4C4, 50px 0, 16px);
+        @media screen and (max-width: 600px){
+            &{
+                @include fonts(10px, 400, #C4C4C4, 50px 0, 16px);
+            }
+        }
+        @media screen and (max-width: 400px){
+            &{
+                @include fonts(7px, 400, #C4C4C4, 50px 0, 16px);
+            }
+        }
+    }
+}
+
+//--------------------------------------------------------------

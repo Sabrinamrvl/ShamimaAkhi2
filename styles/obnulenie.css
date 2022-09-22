@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Ubuntu";
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}/*# sourceMappingURL=obnulenie.css.map */
